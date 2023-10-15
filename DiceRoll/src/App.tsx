@@ -11,6 +11,7 @@ import {
   Image,
   Pressable,
 } from 'react-native';
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
 
 import dice1 from '../assests/dice1.png'
 import dice2 from '../assests/dice2.png'
@@ -22,6 +23,10 @@ import dice6 from '../assests/dice6.png'
 type DiceProps = PropsWithChildren<{
   ImageUrl:ImageSourcePropType
 }>
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false,
+};
 
 // const MyImageComponent = () => {
 //   const myImage = require('./path/to/your/image.jpg'); 
@@ -66,7 +71,7 @@ const diceRollOnTap =() =>{
       setDiceImage(dice1)
       break;
   }
-
+  ReactNativeHapticFeedback.trigger("impactLight", options);
 }
   return (
     <View style={styles.container}>
