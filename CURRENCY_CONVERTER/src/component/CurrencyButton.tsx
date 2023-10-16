@@ -13,7 +13,7 @@ const CurrencyButton =(props: CurrencyButtonProps):JSX.Element =>{
     return(
         <View style = {styles.currencyContainer}>
             <Text  style={styles.currencyFlag}>{props.flag}</Text>
-            <Text style={styles.currencyName}>{props.flag}</Text>
+            <Text style={styles.currencyName}>{props.name}</Text>
         </View>
     )
 }
@@ -28,9 +28,9 @@ currencyFlag:{
     color:'#ffffff',
 },
 currencyName:{
-    fontSize:28,
+    fontSize:12,
     marginBottom:4,
-    color:'#ffffff',
+    color:'#000000',
 
 }
 

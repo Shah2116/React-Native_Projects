@@ -35,7 +35,7 @@ function App(): JSX.Element {
       const convertedValue = inputAmount * targetValue.value
       const result = `${targetValue.symbol} ${convertedValue.toFixed(2)}`
       setResultValue(result);
-      setTargetCurrency(targetValue.nameg)
+      setTargetCurrency(targetValue.name)
     } else {
       return Snackbar.show({
         text: "Enter value to convert",
@@ -78,7 +78,7 @@ function App(): JSX.Element {
             targetCurrency === item.name && styles.selected]}
             onPress={() => buttonPressed(item)}
             >
-             <CurrencyButton {...item}/>
+             <CurrencyButton {...item} />
             </Pressable>
           )}
            />
