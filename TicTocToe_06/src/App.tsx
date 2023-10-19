@@ -136,6 +136,13 @@ function App(): JSX.Element {
     )}
     />
 
+    <Pressable
+    style={styles.gameBtn}
+    onPress={gameReload}
+    >
+   <Text>{gameWinner ? 'Start the new Game' : 'Reload the Game'}</Text>
+    </Pressable>
+
     </SafeAreaView>
   );
 }
