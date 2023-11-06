@@ -29,7 +29,7 @@ function App(): JSX.Element {
       name='Details'
       component={Details}
       options={{
-        title: "Product Detail"
+        title: "Product Details"
       }}
       />
       
