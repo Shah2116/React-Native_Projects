@@ -18,7 +18,7 @@ import React from 'react';
   complexity:string,
   affordability:string,
  }
-
+ 
   function MealItem({
     id,
     title,
