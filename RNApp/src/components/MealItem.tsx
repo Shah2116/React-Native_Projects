@@ -6,11 +6,19 @@ import {
     StyleSheet,
     Platform,
   } from 'react-native';
-  import { useNavigation } from '@react-navigation/native';
-  
-  import MealDetails from './MealDetails';
 import React from 'react';
+  import { useNavigation } from '@react-navigation/native';
+  import MealDetails from './MealDetails';
   
+ type MealItemProps = {
+  id:string,
+  title:string,
+  imageUrl:string,
+  duration:number,
+  complexity:string,
+  affordability:string,
+ }
+
   function MealItem({
     id,
     title,
@@ -18,7 +26,7 @@ import React from 'react';
     duration,
     complexity,
     affordability,
-  }) {
+  }:MealItemProps) {
     const navigation = useNavigation();
   
     function selectMealItemHandler() {

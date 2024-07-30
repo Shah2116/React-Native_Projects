@@ -1,34 +1,35 @@
+import React from 'react';
 import { useLayoutEffect } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
-// import IconButton from '../components/IconButton';
-// import List from '../components/MealDetail/List';
-// import Subtitle from '../components/MealDetail/Subtitle';
-// import MealDetails from '../components/MealDetails';
-// import { MEALS } from '../assests/data/data';
+import IconButton from '../components/IconButton';
+import MealDetails from '../components/MealDetails';
+import Subtitle from '../components/MealDetail/Subtiles';
+import List from '../components/MealDetail/List';
+import { MEALS } from '../assests/data/data';
 
 function MealDetailScreen({ route, navigation }) {
   const mealId = route.params.mealId;
 
-  // const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+  const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   function headerButtonPressHandler() {
     console.log('Pressed!');
   }
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => {
-        return (
-          <IconButton
-            icon="star"
-            color="white"
-            onPress={headerButtonPressHandler}
-          />
-        );
-      },
-    });
-  }, [navigation, headerButtonPressHandler]);
+  // useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     headerRight: () => {
+  //       return (
+  //         <IconButton
+  //           icon="star"
+  //           color="white"
+  //           onPress={headerButtonPressHandler}
+  //         />
+  //       );
+  //     },
+  //   });
+  // }, [navigation, headerButtonPressHandler]);
 
   return (
     <ScrollView style={styles.rootContainer}>

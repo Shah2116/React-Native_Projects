@@ -1,5 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ViewStyle, TextStyle } from 'react-native';
+
+interface MealDetailsProps {
+  duration: number;
+  complexity: string;
+  affordability: string;
+  style?: ViewStyle;
+  textStyle?: TextStyle;
+}
 
 function MealDetails({
   duration,
@@ -7,7 +15,7 @@ function MealDetails({
   affordability,
   style,
   textStyle,
-}) {
+}:MealDetailsProps) {
   return (
     <View style={[styles.details, style]}>
       <Text style={[styles.detailItem, textStyle]}>{duration}m</Text>

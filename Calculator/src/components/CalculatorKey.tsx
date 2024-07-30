@@ -12,7 +12,6 @@ const CalculatorKey =() => {
     const [operation, setOperation] = useState("");
     const [result, setResult] = useState<Number | null>(null);
   
-
   const handleNumberPress = (buttonValue: string) => {
     if(firstNumber.length < 10){
         setFirstNumber(firstNumber + buttonValue);
@@ -24,7 +23,7 @@ const CalculatorKey =() => {
     setSecondNumber(firstNumber);
     setFirstNumber("");
   };
-
+  
   const clear = () => {
     setFirstNumber("");
     setSecondNumber("");
