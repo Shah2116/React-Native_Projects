@@ -1,9 +1,10 @@
 import { useLayoutEffect } from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
 
-import MealItem from '../components/MealItem';
+import MealItem from '../components/MealList/MealItem';
 import { MEALS,CATEGORIES } from '../assests/data/data';
 import React from 'react';
+import MealList from '../components/MealList';
 
 
 
@@ -23,29 +24,9 @@ console.log(catId,"catidr")
       title: categoryTitle,
     });
   }, [catId, navigation]);
-
-  function renderMealItem(itemData) {
-    const item = itemData.item;
-
-    const mealItemProps = {
-      id: item.id,
-      title: item.title,
-      imageUrl: item.imageUrl,
-      affordability: item.affordability,
-      complexity: item.complexity,
-      duration: item.duration,
-    };
-    return <MealItem {...mealItemProps} />;
-  }
-
+ 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={displayedMeals}
-        keyExtractor={(item) => item.id}
-        renderItem={renderMealItem}
-      />
-    </View>
+   <MealList displayedMeals={displayedMeals} />
   );
 }
 

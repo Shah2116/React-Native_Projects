@@ -8,7 +8,7 @@ import {
   } from 'react-native';
 import React from 'react';
   import { useNavigation } from '@react-navigation/native';
-  import MealDetails from './MealDetails';
+  import MealDetails from '../MealDetails';
   
  type MealItemProps = {
   id:string,
